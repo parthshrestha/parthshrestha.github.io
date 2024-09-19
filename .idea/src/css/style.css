@@ -32,12 +32,18 @@
     right: -40px;
     bottom: -40px;
     width: auto;
-    height: auto;
-    background-image: url('../src/img/chatauqua.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
+    height: 100%;
+
 }
+.homeBody{
+    background-image: url('../img/chatauqua.jpg');
+    background-size: cover; /* or contain */
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
 /*.hero{*/
 /*    width: 100%;*/
 /*    min-height: 100vh;*/
