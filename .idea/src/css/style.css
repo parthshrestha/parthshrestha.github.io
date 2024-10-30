@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    font-family: "Times New Roman";
+
+}
 .navbar{
     background: linear-gradient(45deg, #08001f, #1e07aa);
     position: fixed; /* Makes the navbar stay at the top */
@@ -25,31 +30,19 @@
 .nav-list a:hover {
     background-color: #575757;
 }
-.body{
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -40px;
-    bottom: -40px;
-    width: auto;
-    height: 100%;
 
-}
-.homeBody{
-    background-image: url('../img/chatauqua.jpg');
-    background-size: cover; /* or contain */
+
+.hero{
+    margin-top: 40px; /* Adjust this value to match the height of your navbar */
+    background-image: url('../img/chatauqua.jpg'); /* Update with your image path */
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-
+    height: calc(100vh - 40px); /* Adjust the height to account for the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-
-
-/*.hero{*/
-/*    width: 100%;*/
-/*    min-height: 100vh;*/
-/*    background: linear-gradient(45deg, #08001f,#30197d);*/
-/*    color: #fff;*/
-/*}*/
 .container{
     width: 800px;
     height: 180px;
@@ -63,7 +56,10 @@
     border-radius: 15px; /* Rounded corners */
     padding: 30px;
     max-width: 400px;
-    text-align: center;
+    display: flex;
+    flex-direction: column; /*stack items vertically*/
+    align-items: center; /*Center align items horizontally*/
+    text-align: center;/* Center text */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow to enhance the effect */
     /*border: 1px solid rgba(255, 255, 255, 0.3); !* Optional: Light border to enhance the frosted look *!*/
 
@@ -102,11 +98,36 @@
 }
 
 #hrs::after{
-    content: 'Hours';
+    content: 'Hour';
 }
 #min::after{
-    content: 'Mins';
+    content: 'Min';
 }
 #sec::after{
     content: 'Sec';
 }
+.welcome-message {
+    position: relative;
+    z-index: 2;
+    text-align:
+    color: white;
+    padding-top: 20px; /* Optional: Adds some space at the top */
+}
+
+.welcome-message h1 {
+    font-size: 1em; /* Adjust the size as needed */
+
+}
+
+.welcome-message p {
+    font-size: 1em; /* Adjust the size for the paragraph */
+
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Adjust width for smaller screens */
+    }
+    .clock {
+        font-size: 50px; /* Reduce clock size */
+    }

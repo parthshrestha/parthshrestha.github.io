@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    font-family: "Times New Roman";
+
+}
+.navbar{
+    background: linear-gradient(45deg, #08001f, #1e07aa);
+    position: fixed; /* Makes the navbar stay at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+}
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+.nav-list li {
+    margin: 0 15px;
+}
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+.nav-list a:hover {
+    background-color: #575757;
+}
+.container{
+    background: linear-gradient(45deg, #aaa707, #0753aa);
+    margin-top: 40px;
+    background-size: cover;
+    height: calc(100vh - 40px); /* Adjust the height to account for the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.box{
+    width: 800px;
+    height: 180px;
+    top: 50%;
+    bottom: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(40px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Ensure compatibility with Safari */
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column; /*stack items vertically*/
+    align-items: center; /*Center align items horizontally*/
+    text-align: center;/* Center text */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow to enhance the effect */
+}
