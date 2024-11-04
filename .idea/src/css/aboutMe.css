@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    font-family: "Times New Roman";
+
+}
+.navbar{
+    background: linear-gradient(45deg, #08001f, #1e07aa);
+    position: fixed; /* Makes the navbar stay at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+
+}
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+.nav-list li {
+    margin: 0 15px;
+}
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    height: 100vh;
+    margin-top: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr o.8fr;
+}
+main{
+    background: aqua;
+
+}
+#intro-Sidebar{
+    background: blue;
+}
+#hobby1{
+    background: brown;
+}
+#hobby2{
+    background: burlywood;
+}
+#hobby3{
+    background: chocolate;
+}
+footer{
+    background: coral;
+}
