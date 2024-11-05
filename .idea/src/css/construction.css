@@ -44,8 +44,10 @@ body{
     width: 800px;
     height: 180px;
     top: 50%;
+    left: 50%;
     bottom: 50%;
     position: absolute;
+
     transform: translate(-50%, -50%);
     backdrop-filter: blur(40px); /* Apply blur effect */
     -webkit-backdrop-filter: blur(10px); /* Ensure compatibility with Safari */

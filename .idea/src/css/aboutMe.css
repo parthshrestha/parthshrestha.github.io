@@ -54,7 +54,7 @@ main{
     margin: 100px auto;
 }
 .timeline-box{
-    padding: 10px 50px;
+    padding: 10px 30px;
     position: relative;
     width: 50%;
     background: rgba(0,0,0,0.3);
@@ -63,12 +63,16 @@ main{
     position: absolute;
     width: 40px;
     border-radius: 50%;
-    right: -20px;
+    right: 0px;
     top: 32px;
     z-index: 10px;
 }
+.left-container img{
+    right: 0px;
+}
 .right-container img{
     left: -20px;
+    z-index: 21;
 }
 .textBox{
     padding: 20px 30px;
