@@ -33,27 +33,187 @@ body{
 .container{
     display: grid;
     height: 100vh;
-    height: 100vh;
-    margin-top: 40px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1.2fr o.8fr;
+
+    margin-top: 45px;
+
+    grid-template-columns: 0.5fr 1fr 1fr 1fr ;
+    grid-template-rows:1.5fr 0.5fr 0.3fr ;
+    grid-template-areas:
+        "intro-Sidebar main main main "
+        "intro-Sidebar hobby1 hobby2 hobby3"
+        "intro-Sidebar footer footer footer";
 }
 main{
-    background: aqua;
+    background: #4d4c4c;
+    grid-area: main;
+
+}
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+.timeline-box{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    background: rgba(0,0,0,0.3);
+}
+.timeline-box img{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10px;
+}
+.right-container img{
+    left: -20px;
+}
+.textBox{
+    padding: 20px 30px;
+    background: white;
+     position: relative;
+    border-radius: 6px;
+    font-size: 12px;
+}
+.left-contaiter{
+    left: 0;
+}
+.right-container{
+    left: 50%
+}
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: white;
+    top: 0%;
+    left: 50%;
+    margin-left -3px;
+    z-index: 20;
 
 }
 #intro-Sidebar{
-    background: blue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    background: #797373;
+    grid-area: intro-Sidebar;
+    max-width: 500px;
+    padding-left: 10px;
+    padding-right: 20px;
+
+}#intro-Sidebar p {
+     margin: 5px 0; /* Reduces space between paragraphs */
+     line-height: 1.4; /* Adjusts line spacing */
+ }
+
+.profile-photo{
+    width: 150px;
+    height:150px;
+    border-radius: 50%;/* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire circular area without distortion */
+    margin-bottom: 5px; /* Adds some space below the photo */
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow for effect */
+}
+/* Skills list styling */
+#skills-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin-top: 10px;
+}
+#skills-list li {
+    margin-bottom: 10px; /* Space between skills */
+
+}
+.proficiency-bar {
+    height: 8px; /* Height of the bar */
+    background-color: #4CAF50; /* Color of the proficiency bar */
+    border-radius: 4px;
+    margin-top: 4px; /* Space between skill name and the bar */
+}
+#intro-Sidebar img{
+    max-height: 150px;
+    max-width: 150px;
+}
+
+#hobby1, #hobby2, #hobby3 {
+    padding: 15px;
+    min-height: 300px; /* Ensure each hobby section has a minimum height */
+    transition: transform 0.3s ease;
+
+}
+#hobby1:hover, #hobby2:hover, #hobby3:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
 }
 #hobby1{
-    background: brown;
+
+    grid-area: hobby1;
+    background-image: url('../img/300zx.JPG'); /* Path to your 300ZX image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 300px; /* Set a height for the section */
+    color: white; /* Change text color for contrast */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add some padding */
+
 }
+/*#hobby1 img{*/
+/*    max-height: 150px;*/
+/*    max-width: 150px;*/
+/*}*/
 #hobby2{
-    background: burlywood;
+
+    grid-area: hobby2;
+    background-image: url('../img/cameraMan.jpg'); /* Path to your 300ZX image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 300px; /* Set a height for the section */
+    color: white; /* Change text color for contrast */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add some padding */
+
 }
 #hobby3{
-    background: chocolate;
+
+    grid-area: hobby3;
+    background-image: url('../img/vader.JPG'); /* Path to your 300ZX image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 300px; /* Set a height for the section */
+    color: white; /* Change text color for contrast */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add some padding */
+
 }
 footer{
     background: coral;
+    grid-area: footer;
+}
+@media only screen and (max-width: 550px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+        grid-template-areas:
+     "intro-Sidebar"
+    "main"
+    "hobby1"
+    "hobby2"
+    "hobby3"
+    "footer";
+    }
+    
 }
