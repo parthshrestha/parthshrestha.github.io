@@ -29,7 +29,30 @@ body{
     display: block;
     transition: background-color 0.3s;
 }
+.nav-list a:hover {
+    background-color: #575757;
+}
+.nav-list #login {
 
+    padding: 0px; /* Remove padding for the link with the image */
+    padding-top: 10px;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+#login{
+    padding: 0px;
+    display: inline-block; /* Ensures it doesn’t inherit unwanted display rules */
+    margin-left: auto;
+
+}
+#login img {
+    width: 30px; /* Adjust this size as needed */
+    height: 30px; /* Maintain aspect ratio by setting a fixed height */
+    object-fit: contain; /* Ensures the image is scaled without distortion */
+    border-radius: 50%; /* Makes the image circular if desired */
+}
 .container{
     display: grid;
     height: 100vh;

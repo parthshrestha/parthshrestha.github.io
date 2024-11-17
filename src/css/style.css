@@ -19,6 +19,7 @@ body{
 }
 .nav-list li {
     margin: 0 15px;
+
 }
 .nav-list a {
     color: white;
@@ -30,8 +31,30 @@ body{
 .nav-list a:hover {
     background-color: #575757;
 }
+.nav-list #login {
+
+    padding: 0px; /* Remove padding for the link with the image */
+    padding-top: 10px;
+}
+
+.spacer {
+    flex-grow: 1;
+}
 
 
+}
+#login{
+    padding: 0px;
+    display: inline-block; /* Ensures it doesn’t inherit unwanted display rules */
+    margin-left: auto;
+
+}
+#login img {
+    width: 30px; /* Adjust this size as needed */
+    height: 30px; /* Maintain aspect ratio by setting a fixed height */
+    object-fit: contain; /* Ensures the image is scaled without distortion */
+    border-radius: 50%; /* Makes the image circular if desired */
+}
 .hero{
     margin-top: 40px; /* Adjust this value to match the height of your navbar */
     background-image: url('../img/chatauqua.jpg'); /* Update with your image path */
