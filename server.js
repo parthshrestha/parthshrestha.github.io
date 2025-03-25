@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
@@ -5,26 +6,35 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "src", "pages"));
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Serve static assets from src folders
-app.use("/css", express.static(path.join(__dirname, "src", "css")));
-app.use("/img", express.static(path.join(__dirname, "src", "img")));
-app.use("/script", express.static(path.join(__dirname, "src", "script")));
-app.use("/pages", express.static(path.join(__dirname, "src", "pages")));
-
-// Serve homepage from /src/pages/index.html
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "src", "pages", "index.html"));
+  res.render("index", { page: "home" });
 });
 
-// Optional: route to contact.html
 app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname, "src", "pages", "contact.html"));
+  res.render("contact", { page: "contact" });
 });
 
+app.get("/about", (req, res) => {
+  res.render("about", { page: "about" });
+});
+
+app.get("/experience", (req, res) => {
+  res.render("experience", { page: "experience" });
+});
+
+app.get("/projects", (req, res) => {
+  res.render("projects", { page: "projects" });
+});
+
+app.get("/blog", (req, res) => {
+  res.render("blog", { page: "blog" });
+});
 // Email route
 app.post("/send-email", async (req, res) => {
   const { name, email, subject, message } = req.body;
@@ -34,8 +44,8 @@ app.post("/send-email", async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "parthshrestha12@gmail.com",
-        pass: "otuecpqiywqhjhev"
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
       }
     });
 

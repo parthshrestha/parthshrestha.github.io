@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head style="background-color: crimson">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Creative Space</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body class="homeBody">
+    <%- include("partials/_navbar") %>
+
+    <div class="hero">
+      <div class="container">
+        <div class="clock">
+          <span id="hrs">00</span>
+          <span>:</span>
+          <span id="min">00</span>
+          <span>:</span>
+          <span id="sec">00</span>
+        </div>
+        <div class="welcome-message">
+          <h1>Welcome to My Creative Space</h1>
+          <p>Take a moment to look around and discover my work and passions.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let hrs = document.getElementById("hrs");
+      let min = document.getElementById("min");
+      let sec = document.getElementById("sec");
+      setInterval(() => {
+        let currentTime = new Date();
+
+        hrs.innerHTML =
+          (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+        min.innerHTML =
+          (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+        sec.innerHTML =
+          (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+      }, 1000);
+    </script>
+  </body>
+</html>
