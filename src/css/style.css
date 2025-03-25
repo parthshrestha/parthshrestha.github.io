@@ -42,7 +42,6 @@ body{
 }
 
 
-}
 #login{
     padding: 0px;
     display: inline-block; /* Ensures it doesn’t inherit unwanted display rules */
@@ -154,3 +153,4 @@ body{
     .clock {
         font-size: 50px; /* Reduce clock size */
     }
+}

@@ -1,0 +1,107 @@
+ody {
+  margin: 0;
+  font-family: "Times New Roman";
+}
+.navbar {
+  background: linear-gradient(45deg, #08001f, #1e07aa);
+  position: fixed; /* Makes the navbar stay at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top of other content */
+}
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.nav-list li {
+  margin: 0 15px;
+}
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+  transition: background-color 0.3s;
+}
+.nav-list a:hover {
+  background-color: #575757;
+}
+.nav-list #login {
+  padding: 0px; /* Remove padding for the link with the image */
+  padding-top: 10px;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+#login {
+  padding: 0px;
+  display: inline-block; /* Ensures it doesn’t inherit unwanted display rules */
+  margin-left: auto;
+}
+#login img {
+  width: 30px; /* Adjust this size as needed */
+  height: 30px; /* Maintain aspect ratio by setting a fixed height */
+  object-fit: contain; /* Ensures the image is scaled without distortion */
+  border-radius: 50%; /* Makes the image circular if desired */
+}
+.hero {
+  margin-top: 40px; /* Adjust this value to match the height of your navbar */
+  background-image: url("../img/chatauqua.jpg"); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 40px); /* Adjust the height to account for the navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: 50%;
+
+  margin-top: 10px;
+  transform: translate(-50%, -50%);
+  /*background-color: rgba(255, 255, 255, 0.2); !* White with transparency *!*/
+  backdrop-filter: blur(40px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Ensure compatibility with Safari */
+  border-radius: 15px; /* Rounded corners */
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow to enhance the effect */
+  /*border: 1px solid rgba(255, 255, 255, 0.3); !* Optional: Light border to enhance the frosted look *!*/
+}
+form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  display: block;
+  width: 40%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}

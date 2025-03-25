@@ -1,240 +1,224 @@
-body{
-    margin: 0;
-    font-family: "Times New Roman";
-
+body {
+  margin: 0;
+  font-family: "Times New Roman";
 }
-.navbar{
-    background: linear-gradient(45deg, #08001f, #1e07aa);
-    position: fixed; /* Makes the navbar stay at the top */
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Ensures the navbar stays on top of other content */
-
+.navbar {
+  background: linear-gradient(45deg, #08001f, #1e07aa);
+  position: fixed; /* Makes the navbar stay at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top of other content */
 }
 .nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
 }
 .nav-list li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 .nav-list a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
-    transition: background-color 0.3s;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+  transition: background-color 0.3s;
 }
 .nav-list a:hover {
-    background-color: #575757;
+  background-color: #575757;
 }
 .nav-list #login {
-
-    padding: 0px; /* Remove padding for the link with the image */
-    padding-top: 10px;
+  padding: 0px; /* Remove padding for the link with the image */
+  padding-top: 10px;
 }
 
 .spacer {
-    flex-grow: 1;
+  flex-grow: 1;
 }
-#login{
-    padding: 0px;
-    display: inline-block; /* Ensures it doesn’t inherit unwanted display rules */
-    margin-left: auto;
-
+#login {
+  padding: 0px;
+  display: inline-block; /* Ensures it doesn’t inherit unwanted display rules */
+  margin-left: auto;
 }
 #login img {
-    width: 30px; /* Adjust this size as needed */
-    height: 30px; /* Maintain aspect ratio by setting a fixed height */
-    object-fit: contain; /* Ensures the image is scaled without distortion */
-    border-radius: 50%; /* Makes the image circular if desired */
+  width: 30px; /* Adjust this size as needed */
+  height: 30px; /* Maintain aspect ratio by setting a fixed height */
+  object-fit: contain; /* Ensures the image is scaled without distortion */
+  border-radius: 50%; /* Makes the image circular if desired */
 }
-.hero{
-    margin-top: 40px; /* Adjust this value to match the height of your navbar */
-    background-image: url('../img/chatauqua.jpg'); /* Update with your image path */
-    background-size: cover;
-    background-position: center;
-    height: calc(100vh - 40px); /* Adjust the height to account for the navbar */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.hero {
+  margin-top: 40px; /* Adjust this value to match the height of your navbar */
+  background-image: url("../img/chatauqua.jpg"); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 40px); /* Adjust the height to account for the navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-.container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 75%;
-    height: 50%;
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: 50%;
 
-    margin-top: 10px;
-    transform: translate(-50%, -50%);
-    /*background-color: rgba(255, 255, 255, 0.2); !* White with transparency *!*/
-    backdrop-filter: blur(40px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Ensure compatibility with Safari */
-    border-radius: 15px; /* Rounded corners */
+  margin-top: 10px;
+  transform: translate(-50%, -50%);
+  /*background-color: rgba(255, 255, 255, 0.2); !* White with transparency *!*/
+  backdrop-filter: blur(40px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Ensure compatibility with Safari */
+  border-radius: 15px; /* Rounded corners */
 
-
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow to enhance the effect */
-    /*border: 1px solid rgba(255, 255, 255, 0.3); !* Optional: Light border to enhance the frosted look *!*/
-
-
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow to enhance the effect */
+  /*border: 1px solid rgba(255, 255, 255, 0.3); !* Optional: Light border to enhance the frosted look *!*/
 }
-.item{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40%;
-    height: 100%;
-    color: white;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    background-color: gray;
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: gray;
 }
-.item .logo{
-    color: white;
-    font-size: 30px;
-    padding: 10px;
+.item .logo {
+  color: white;
+  font-size: 30px;
+  padding: 10px;
 }
-.text-item h2{
-    font-size: 40px;
-    line-height: 1;
-    padding: 10px;
+.text-item h2 {
+  font-size: 40px;
+  line-height: 1;
+  padding: 10px;
 }
-.text-item p{
-    font-size: 16px;
-    margin:20px 0;
-    padding: 10px;
+.text-item p {
+  font-size: 16px;
+  margin: 20px 0;
+  padding: 10px;
 }
-.container .login-section{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(100% - 40%);
-    height: 100%;
-
-
+.container .login-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 40%);
+  height: 100%;
 }
 
-.login-section .form-box{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+.login-section .form-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-.login-section .form-box h2{
-    text-align: center;
-    font-size: 25px;
+.login-section .form-box h2 {
+  text-align: center;
+  font-size: 25px;
 }
-.form-box .input-box{
-    width: 340px;
-    height: 50px;
-    border-bottom: 2px solid white;
-    margin: 30px 0;
-    position: relative;
+.form-box .input-box {
+  width: 340px;
+  height: 50px;
+  border-bottom: 2px solid white;
+  margin: 30px 0;
+  position: relative;
 }
-.form-box input{
-    width: 100%;
-    height:100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    padding-right: 28px;
+.form-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-right: 28px;
 }
-.input-box label{
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    font-size: 16px;
-    font-weight: 600px;
-    pointer-events: none;
-    transition: 0.5s ease;
+.input-box label {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 600px;
+  pointer-events: none;
+  transition: 0.5s ease;
 }
-.input-box .icon{
-    position: absolute;
+.input-box .icon {
+  position: absolute;
 
-    /*top: 13px;*/
-    right: 0;
-    font-size: 19px;
+  /*top: 13px;*/
+  right: 0;
+  font-size: 19px;
 }
-.icon img{
-    padding: 15px;
-    max-height: 30px;
+.icon img {
+  padding: 15px;
+  max-height: 30px;
 }
-.remember-password{
-    font-size: 14px;
-    font-weight: 500;
-    margin: -15px 0px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px; /* Adjust spacing between elements */
+.remember-password {
+  font-size: 14px;
+  font-weight: 500;
+  margin: -15px 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px; /* Adjust spacing between elements */
 }
-.input-box input:focus~label,
-.input-box input:valid~label{
-    top: -5px;
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
 }
 .remember-password label {
-    display: flex;
-    align-items: center;
-    margin: 0; /* Remove any margin that may cause extra space */
+  display: flex;
+  align-items: center;
+  margin: 0; /* Remove any margin that may cause extra space */
 }
-.remember-password label input{
-    accent-color: white;
-    margin-right: 3px;
+.remember-password label input {
+  color: white;
+  margin-right: 3px;
 }
 .remember-password input[type="checkbox"] {
-    margin: 0 5px 0 0; /* Adjusts space around the checkbox */
+  margin: 0 5px 0 0; /* Adjusts space around the checkbox */
 }
 
 .remember-password a {
-    color: white;
-    margin-left: 10px; /* Adjust spacing between "Remember Me" and "Forget password" link if needed */
-    text-decoration: none;
+  color: white;
+  margin-left: 10px; /* Adjust spacing between "Remember Me" and "Forget password" link if needed */
+  text-decoration: none;
 }
-.remember-password a:hover{
-    text-decoration: underline;
+.remember-password a:hover {
+  text-decoration: underline;
 }
-.btn{
-    background: white;
-    width: 100%;
-    height: 45px;
-    outline: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background: gray;
-    font-size: 16px;
-    color: white;
-    box-shadow: rgba(0,0,0,0.4);
+.btn {
+  background: white;
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: gray;
+  font-size: 16px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.4);
 }
-.create-account{
-    font-size: 14.5px;
-    text-align: center;
-    margin: 25px;
+.create-account {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 25px;
 }
-.create-account p a{
-    color: white;
-    font-weight: 600px;
-    text-decoration: none;
+.create-account p a {
+  color: white;
+  font-weight: 600px;
+  text-decoration: none;
 }
-.create-account p a:hover{
-    text-decoration: underline;
+.create-account p a:hover {
+  text-decoration: underline;
 }
-
-
-
-
-
-
-
