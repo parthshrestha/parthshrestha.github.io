@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+
+<body>
+    <%- include("partials/_navbar") %>
+
+    <div class="hero">
+        <div class="form-box login active" style="text-align: center;">
+            <h2>Welcome, <%= user.name %>!</h2>
+            <p>There's nothing to see here (yet).</p>
+            <a class="btn" href="/">Sign Out</a>
+        </div>
+    </div>
+</body>
+
+</html>

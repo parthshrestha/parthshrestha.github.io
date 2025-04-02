@@ -251,3 +251,20 @@ body {
 .form-section {
   position: relative;
 }
+.form-message {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.form-message.success {
+  color: #2ecc71;
+  opacity: 1;
+}
+
+.form-message.error {
+  color: #e74c3c;
+  opacity: 1;
+}

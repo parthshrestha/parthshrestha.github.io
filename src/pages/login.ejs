@@ -29,15 +29,20 @@
         <div class="form-section">
           <!-- Login Form -->
           <div class="form-box login active">
-            <form>
+            <form id="loginForm">
               <h2>Sign in</h2>
               <div class="input-box">
                 <span class="icon"><img src="../img/envelope.png"/></span>
-                <input type="email" placeholder="email" required />
+                <input type="email" name="email" placeholder="email" required />
               </div>
               <div class="input-box">
                 <span class="icon"><img src="../img/lock.png"/></span>
-                <input type="password" placeholder="password" required />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                  required
+                />
               </div>
               <div class="remember-password">
                 <label><input type="checkbox" /> RememberMe</label>
@@ -51,23 +56,30 @@
                 </p>
               </div>
             </form>
+            <div id="login-message" class="form-message"></div>
           </div>
 
           <!-- Sign-Up Form -->
           <div class="form-box signup">
             <form id="signupForm">
+              <div id="signup-message" class="form-message"></div>
               <h2>Sign up</h2>
               <div class="input-box">
                 <span class="icon"><img src="../img/envelope.png"/></span>
-                <input type="text" placeholder="name" required />
+                <input type="text" name="name" placeholder="name" required />
               </div>
               <div class="input-box">
                 <span class="icon"><img src="../img/envelope.png"/></span>
-                <input type="email" placeholder="email" required />
+                <input type="email" name="email" placeholder="email" required />
               </div>
               <div class="input-box">
                 <span class="icon"><img src="../img/lock.png"/></span>
-                <input type="password" placeholder="password" required />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                  required
+                />
               </div>
               <button class="btn" type="submit">Sign Up</button>
               <div class="create-account">
