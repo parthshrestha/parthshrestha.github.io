@@ -4,53 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accounts</title>
-    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
+
   <body>
     <%- include("partials/_navbar") %>
+
     <div class="hero">
-      <!--login section-->
-      <div class="container">
+      <!-- Container with toggle logic -->
+      <div id="form-wrapper">
+        <!-- Left welcome panel -->
         <div class="item">
           <h2 class="logo">Accounts</h2>
           <div class="text-item">
-            <h2>
-              Welcome!<br /><span>
-                make your account
-              </span>
-            </h2>
+            <h2>Welcome!<br /><span>make your account</span></h2>
             <p>
-              Join my growing community of inovators looking to contribute and
+              Join my growing community of innovators looking to contribute and
               work on new ideas
             </p>
           </div>
         </div>
-        <div class="login-section">
-          <div class="form-box login">
-            <form action="">
+
+        <!-- Forms section -->
+        <div class="form-section">
+          <!-- Login Form -->
+          <div class="form-box login active">
+            <form>
               <h2>Sign in</h2>
               <div class="input-box">
                 <span class="icon"><img src="../img/envelope.png"/></span>
-                <!--                    <label for="email">Email</label>-->
                 <input type="email" placeholder="email" required />
               </div>
               <div class="input-box">
                 <span class="icon"><img src="../img/lock.png"/></span>
-                <!--                    <label for="email">Password</label>-->
                 <input type="password" placeholder="password" required />
               </div>
               <div class="remember-password">
-                <label for="checkbox"
-                  ><input type="checkbox" />RememberMe</label
-                >
-                <br />
-                <a href="#"> Forget password</a>
+                <label><input type="checkbox" /> RememberMe</label>
+                <a href="#">Forget password</a>
               </div>
-              <button class="btn">Log In</button>
+              <button class="btn" type="submit">Log In</button>
               <div class="create-account">
                 <p>
                   Create a New Account?
-                  <a href="#" class="registration-link">SignUp</a>
+                  <a href="#" id="showSignUp">SignUp</a>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Sign-Up Form -->
+          <div class="form-box signup">
+            <form id="signupForm">
+              <h2>Sign up</h2>
+              <div class="input-box">
+                <span class="icon"><img src="../img/envelope.png"/></span>
+                <input type="text" placeholder="name" required />
+              </div>
+              <div class="input-box">
+                <span class="icon"><img src="../img/envelope.png"/></span>
+                <input type="email" placeholder="email" required />
+              </div>
+              <div class="input-box">
+                <span class="icon"><img src="../img/lock.png"/></span>
+                <input type="password" placeholder="password" required />
+              </div>
+              <button class="btn" type="submit">Sign Up</button>
+              <div class="create-account">
+                <p>
+                  Already have an account?
+                  <a href="#" id="showLogin">Login</a>
                 </p>
               </div>
             </form>
@@ -58,6 +81,7 @@
         </div>
       </div>
     </div>
-    <script src="../script/login.js"></script>
+
+    <script src="/script/login.js"></script>
   </body>
 </html>
