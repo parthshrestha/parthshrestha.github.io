@@ -1,0 +1,21 @@
+{
+  "family": "pshrestha-task",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "pshrestha-portfolio",
+      "image": "197704202547.dkr.ecr.us-east-1.amazonaws.com/pshrestha-portfolio:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::197704202547:role/ecsTaskExecutionRole"
+}
